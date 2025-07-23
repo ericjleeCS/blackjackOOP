@@ -4,9 +4,9 @@ public class App {
         Player player = new Player();
         Dealer dealer = new Dealer();
 
-        player.addCard(deck.drawCard());
-        dealer.addCard(deck.drawCard());
-        player.addCard(deck.drawCard());
+        player.drawFromDeck(deck);
+        dealer.drawFromDeck(deck);
+        player.drawFromDeck(deck);
         
         System.out.println("Player's card total is: " + player.getHandValue());
         System.out.println("Dealer's hand total is: " + dealer.getHandValue());

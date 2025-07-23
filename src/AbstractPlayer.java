@@ -10,6 +10,10 @@ public abstract class AbstractPlayer{
         hand.add(card);
     }
 
+    public void drawFromDeck(Deck deck){
+        this.addCard(deck.drawCard());
+    }
+
     public int getHandValue(){
         int total = 0;
         int amtOfAces = 0;

@@ -14,7 +14,7 @@ public class Player extends AbstractPlayer{
             if (decision.equals("hit")){
                 Card drawnCard = deck.drawCard();
                 this.addCard(drawnCard);
-                System.out.println("You drew:" + drawnCard);
+                System.out.println("You drew:" + drawnCard.getValue());
 
                 if (isBust()){
                     System.out.println("You busted");
