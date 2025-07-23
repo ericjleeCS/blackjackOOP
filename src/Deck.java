@@ -37,4 +37,10 @@ public class Deck {
         return firstCard;
     }
 
+    public void reset(){
+        cards.clear();
+        buildSixDeck();
+        shuffle();
+    }
+
 }

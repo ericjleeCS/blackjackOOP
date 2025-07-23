@@ -14,21 +14,17 @@ public class Card{
         else if (isAce()){
             return 11;
         }
-        return Integer.parseInt(value);
+        try{
+            return Integer.parseInt(value);
+        } catch (Exception e){
+            throw new IllegalArgumentException("Invalid card value:" + value);
+        }
     }
 
     public boolean isFace(){
-        if (value.equals("Jack") || value.equals("Queen") || value.equals("King")){
-            return true;
-        }
-        return false;
+        return value.equals("Jack") || value.equals("Queen") || value.equals("King");
     }
-
     public boolean isAce(){
-        if (value.equals("Ace")){
-            return true;
-        }
-        return false;
+        return value.equals("Ace");
     }
-
 }
